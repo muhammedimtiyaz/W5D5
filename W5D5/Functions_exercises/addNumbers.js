@@ -28,7 +28,7 @@ function absurdTimes(sum, numTimes, fnAsync, completionFn) {
   loopStep(sum);
 }
 
-function addNumbers(sum, numsLeft, completionCallback) {
+function absurdAddNumbers(sum, numsLeft, completionCallback) {
 
   function getNumAndAddToSum(callback) {
     reader.question("Enter num: ", function (numString) {      
@@ -44,6 +44,24 @@ function addNumbers(sum, numsLeft, completionCallback) {
 
 const completionFn = function (sum) { console.log(`Total Sum: ${sum}`); };
 addNumbers(0, 3, completionFn);
+
+
+
+function addNumbers(sum, numsLeft, completionFn) {
+
+  reader.question("Enter num: ", function (numString) {
+    const num = parseInt(numString);
+    sum += num;
+    console.log(sum);
+    numsLeft--;
+    if (numsLeft === 0) {
+      completionFn(sum);
+      reader.close();  
+    } else {
+      addNumbers(sum, numsLeft, completionFn);
+    }
+  });
+}
 
 
 
