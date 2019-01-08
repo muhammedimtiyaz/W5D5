@@ -1,0 +1,54 @@
+.ttt ul {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  flex-wrap: wrap;
+  background: gray;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+
+}
+.ttt li {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  background: salmon;
+  border: 1px solid black;
+
+  margin: 0px;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt li:hover {
+  background: purple;
+}
+
+h1 {
+  text-align: center;
+}
+
+.ttt .x {
+  background-color: cornflowerblue;
+
+}
+
+.ttt .o {
+  background-color: yellowgreen;
+}
+
+.x::after {
+  content: "X";
+  font-size: 100px;
+  color: yellow;
+} 
+
+.o::after {
+  content: "O";
+  font-size: 100px;
+  color: red;
+}

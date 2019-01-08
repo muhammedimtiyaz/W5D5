@@ -1,0 +1,12 @@
+/* PHASE 9: Forms */
+
+.content-main {
+  display: flex;
+}
+
+.input {
+  
+  float: right;
+  margin: 5px;
+  padding: 5px;
+}
